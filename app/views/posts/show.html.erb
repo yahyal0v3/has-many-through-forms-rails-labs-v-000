@@ -20,8 +20,8 @@
   <%= f.text_area :content %><br>
   <%= f.label "Choose or Create a Username:" %>
   <%= f.collection_select :user_id, User.all, :id, :username %><br>
-  <%= f.fields_for :user %>
-    <%= f.text_field :username %>
+  <%= f.fields_for :user, @post.user.build do |u| %>
+    <%= u.text_field :username %>
   <% end %>
   <%= f.hidden_field :post_id %>
   <%= f.submit %>
