@@ -20,7 +20,9 @@
   <%= f.text_area :content %><br>
   <%= f.label "Choose or Create a Username:" %>
   <%= f.collection_select :user_id, User.all, :id, :username %><br>
-  <%= f.text_field :user_id %>
+  <%= f.fields_for :user %>
+    <%= f.text_field :username %>
+  <% end %>
   <%= f.hidden_field :post_id %>
   <%= f.submit %>
 <% end %>
