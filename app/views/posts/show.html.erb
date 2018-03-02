@@ -22,8 +22,8 @@
 <% end %>
 
 <%= form_for(@comment) do |f| %>
-  <%= f.label "Leave a Comment" %>
-  <%= f.collection_check_boxes :user, User.all, :id, :username %>
+  <%= f.label "Leave a Comment" %><br>
+  <%= f.collection_check_boxes :user, User.all, :id, :username %><br>
   <%= f.text_area :content %>
   <%= f.submit %>
 <% end %>
