@@ -14,3 +14,8 @@
     <li><%= category.name %></li>
   <% end %>
 </ul>
+
+<%= form_for(@comment) do |f| %>
+  <%= f.label "Leave a Comment" %>
+  <%= f.text_area :content%>
+<% end %>
