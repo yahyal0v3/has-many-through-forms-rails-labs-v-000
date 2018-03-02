@@ -8,7 +8,7 @@
 </ul>
 
 <% @post.comments.each do |comment| %>
-  <%= comment.user.username %> says <%= comment.content %>
+  <p><%= comment.user.username %> says <%= comment.content %></p><br>
 <% end %>
 
 <%= form_for(@post.comments.build) do |f| %>
