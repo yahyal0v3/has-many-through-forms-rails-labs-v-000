@@ -15,7 +15,14 @@
   <% end %>
 </ul>
 
+
+<% @post.comments.each do |comment| %>
+  <%= comment.user %>
+  <%= comment.content %>
+<% end %>
+
+
 <%= form_for(@comment) do |f| %>
   <%= f.label "Leave a Comment" %>
-  <%= f.text_area :content%>
+  <%= f.text_area :content %>
 <% end %>
