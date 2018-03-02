@@ -11,8 +11,13 @@
 
 <h3>Comments</h3>
 <% @post.comments.each do |comment| %>
-  <p><%= link_to comment.user.username, user_path(comment.user) %> says: <%= comment.content %></p>
+  <p><%= comment.user.username %> says: <%= comment.content %></p>
 <% end %>
+<ul>
+  <% @post.users.uniq.each do |user| %>
+    <%= link_to user.username, user_path(user) %>
+  <% end %>
+</ul>
 <br><br>
 
 <%= form_for(@post.comments.build) do |f| %>
