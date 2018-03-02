@@ -3,6 +3,7 @@
 <ul>
   <% @user.comments.each do |comment| %>
     <li><%= comment.content %><br>
+      <%= raise comment.inspect =>
     <%= link_to comment.post.title, post_path(comment.post) %></li>
   <% end %>
 </ul>
