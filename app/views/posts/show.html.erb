@@ -21,8 +21,8 @@
   <%= comment.content %>
 <% end %>
 
-
 <%= form_for(@comment) do |f| %>
   <%= f.label "Leave a Comment" %>
+  <%= f.collection_select :user, User.all, :id, :name %>
   <%= f.text_area :content %>
 <% end %>
