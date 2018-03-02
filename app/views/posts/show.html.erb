@@ -13,7 +13,7 @@
   <p><%= comment.user.username %> says <%= comment.content %></p>
 <% end %>
 
-<br>br
+<br><br>
 
 <%= form_for(@post.comments.build) do |f| %>
   <%= f.label "Leave a Comment" %><br><br>
